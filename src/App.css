@@ -1,0 +1,204 @@
+*
+ {
+  box-sizing: border-box;
+}
+
+body {
+
+  color: #272727;
+
+  font-family: 'Courier New', Courier, monospace;
+  font-style: normal;
+  font-size: 25px;
+  font-weight: 200;
+  letter-spacing: 0;
+  /* padding: 1rem; */
+  
+}
+
+.card-grid{
+  width:100%;
+  height:100%;
+  line-height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-flow: wrap;
+  align-items: center;
+}
+
+.card {
+
+width:20%;
+height:20%;
+background-color:white;
+margin:18px;
+/* margin-top: 50px; */
+padding: 120px 0;
+text-align: center;
+box-sizing: border-box;
+position: relative;
+box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+border: 1px solid #BFBFBF;
+border-top-style: solid;
+border-top-color:#949697;
+border-top-width: 4px;
+transform : perspective(1000px)rotateY(var(--rotate-y,0));
+transform-style: preserve-3d;
+transition:300ms;
+cursor:pointer;
+
+
+}
+.card:hover, 
+.card-front:hover,
+.card-back:hover,
+.flip-arrow-front:hover,
+.flip-arrow-back:hover
+{
+opacity: 1;
+}
+
+.flip
+{
+  background-color: whitesmoke;
+  border: 1px solid #BFBFBF;
+  --rotate-y : -180deg;
+  height:300px;
+  width:300px;
+  
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.card-front,
+.card-back {
+  
+margin: 0px,10px,0px;
+width: 100%;
+position: absolute;
+backface-visibility: hidden;
+opacity:0.6;
+
+}
+
+.card-front{
+margin-top: -25px;
+}
+
+.card-back
+ {
+  background-color:#f7f4f2;
+   transform: rotateY(180deg);
+ }
+
+.flip-arrow-front {
+  width: 17px;
+  height:17px;
+  position:absolute; 
+  bottom:25px;
+  right:14px;
+  backface-visibility: hidden;
+  opacity:0.4;
+}
+
+.flip-arrow-back {
+  width: 17px;
+  height:17px;
+  position:absolute; 
+  bottom:15px;
+  left:15px;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  opacity:0.4;
+
+}
+
+.coffee-image {
+  width:100%;
+  height:300px;
+  max-width: 100%;
+  backface-visibility: hidden;
+  position:absolute;
+  top:-123px;
+  left:0;
+
+}
+
+.txt-content{
+  width:100%;
+  text-align: center;
+  margin: 0 auto;
+  padding:10px;
+ 
+}
+
+.txt-area-content {
+  background-color: whitesmoke;
+  font-size: 20px;
+  font-family:inherit;
+  width:100%;
+  backface-visibility: hidden;
+  padding: 30px;
+  height:250px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: absolute;
+  top:-123px;
+  left:0;
+  border-style: none; 
+  border-color: Transparent; 
+  outline: none;
+  resize: none;
+  overflow: auto;        
+  
+}
+
+@media screen and (max-width:1200px){
+  .card{
+    width:35%;
+
+  }   
+}
+
+@media screen and (max-width:600px){
+  .card {
+    width:60%;
+    font-size: 20px;
+    margin-top: 10px;
+    
+  }  
+}
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
